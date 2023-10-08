@@ -13,7 +13,7 @@ export class AuthController {
   @UseGuards(AuthGuard('local'))
   @HttpCode(HttpStatus.OK)
   @Post('signin')
-  signIn(@Request() req, @Body() body: SignInRequestDto) {
+  signIn(@Request() req, @Body() body: SignInRequestDto) {  
     return this.authService.signIn(req.user);
   }
 

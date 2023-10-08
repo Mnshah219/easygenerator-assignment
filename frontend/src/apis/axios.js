@@ -14,3 +14,5 @@ instance.interceptors.response.use(undefined, (err) => {
     }
     return Promise.reject(err); 
 });
+
+export default instance;

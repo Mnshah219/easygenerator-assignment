@@ -9,7 +9,7 @@ export class UserService {
   async findOne(email: string): Promise<User | undefined> {
     return this.userModel.findOne({
       email
-    });
+    }, undefined, { lean: true });
   }
 
   async create(user: User) {
