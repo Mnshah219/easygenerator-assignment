@@ -31,6 +31,11 @@ const useAuthStore = defineStore('auth', {
             return false;
         },
 
+        logout() {
+            localStorage.removeItem('accessToken');
+            this.user = null;
+        },
+
         async fetchUserProfile() {
             const user = await fetchUserProfileApi();
             this.user = user;
